@@ -5,7 +5,7 @@ import { useMain } from "@/app/mainContext";
 
 const TicTacToe = () => {
   const { makeMove } = useMain();
-  const { gameRoomData, isPlayerMove } = useGame();
+  const { gameRoomData, isPlayerMove, isGameEnded } = useGame();
 
   const { board } = gameRoomData;
   return (
@@ -16,8 +16,8 @@ const TicTacToe = () => {
             {row.map((cell: any, inde: number) => {
               return (
                 <button
-                  disabled={!isPlayerMove}
-                  className="w-5 h-5 border p-5 disabled:bg-slate-600 hover:bg-gray-200 flex items-center justify-center"
+                  disabled={!isPlayerMove || isGameEnded}
+                  className="w-36 mr-3 mb-3 h-36 border p-5 text-4xl font-mono rounded-md disabled:bg-[#ffffff32] hover:bg-[#ffffff32] flex items-center justify-center"
                   key={inde}
                   onClick={() =>
                     makeMove({

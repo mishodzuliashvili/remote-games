@@ -1,3 +1,4 @@
+import "react-toastify/dist/ReactToastify.css";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Fira_Mono } from "next/font/google";

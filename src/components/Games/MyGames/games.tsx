@@ -10,4 +10,13 @@ export const GAME_PROFILES: GameProfile[] = [
     image:
       "https://img.freepik.com/premium-photo/basketball-balls-tic-tac-toe-game-red-background-3d-rendering_476612-19555.jpg",
   },
+  {
+    name: "Rock Paper Scissors",
+    gameRoomName: "Rock Paper Scissors",
+    component: null,
+    description:
+      'Rock paper scissors is an intransitive hand game, usually played between two people, in which each player simultaneously forms one of three shapes with an outstretched hand. These shapes are "rock", "paper", and "scissors"',
+    image:
+      "https://c4.wallpaperflare.com/wallpaper/899/325/192/minimalism-rock-paper-scissors-wallpaper-preview.jpg",
+  },
 ];

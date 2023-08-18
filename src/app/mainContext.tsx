@@ -5,8 +5,6 @@ import React, { createContext, useContext, useEffect, useState } from "react";
 import { io } from "socket.io-client";
 import { ToastContainer, toast } from "react-toastify";
 
-import "react-toastify/dist/ReactToastify.css";
-
 const MainContext = createContext(
   {} as {
     joinPlayground: (nickname: string) => void;
@@ -98,7 +96,12 @@ export function MainProvider({ children }: { children: React.ReactNode }) {
         error,
       }}
     >
-      <ToastContainer />
+      <ToastContainer
+        style={{
+          color: "black",
+          borderRadius: "10px",
+        }}
+      />
       {error && <MainError error={error} />}
       {!error && loading && <MainLoader />}
       {!error && !loading && children}

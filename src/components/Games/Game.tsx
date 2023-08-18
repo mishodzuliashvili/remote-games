@@ -19,18 +19,18 @@ const Game = () => {
   } = useGame();
 
   return (
-    <div>
-      <h1>Game: {gameRoomName}</h1>
-      <button onClick={leaveGameRoom} className="underline">
+    <div className="p-5 flex flex-col gap-2 items-start w-full">
+      <h2 className="text-3xl font-bold">Playground</h2>
+      <h3 className="font-medium">GameRoom: {gameRoomName}</h3>
+      <p className="font-medium">
+        Players: {players.map((player) => player.name).join(", ")}
+      </p>
+      <button
+        className=" text-white underline font-medium rounded-full hover:text-gray-200 duration-300"
+        onClick={leaveGameRoom}
+      >
         Leave GameRoom
       </button>
-      <h2>Players</h2>
-      <ul>
-        {players.map((player: Player) => (
-          <li key={player.id}>{player.name}</li>
-        ))}
-      </ul>
-      <div>Status: {status}</div>
       <div>{isGameLoading && "Loading..."}</div>
       <div>{(isGameStarted || isGameEnded) && gameRoomComponent}</div>
       <div>
