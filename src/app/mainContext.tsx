@@ -28,6 +28,7 @@ export function MainProvider({ children }: { children: React.ReactNode }) {
   const [error, setError] = useState<Error | null>(null);
   const [socket, setSocket] = useState<any>(null);
   useEffect(() => {
+    console.log(process.env.NEXT_PUBLIC_SOCKET_URL);
     const socket = io(process.env.NEXT_PUBLIC_SOCKET_URL || "");
     setSocket(socket);
     socket.on("connect", () => {
