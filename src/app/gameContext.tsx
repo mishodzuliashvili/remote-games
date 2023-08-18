@@ -42,7 +42,6 @@ export function GameProvider({ children }: { children: React.ReactNode }) {
   const isPlayerMove = player?.id === game?.gameRoom.currentPlayerID;
   const isGameLoading = game?.gameRoom.status === "loading";
   const isGameStarted = game?.gameRoom.status === "started";
-  console.log(game?.gameRoom);
   return (
     <GameContext.Provider
       value={{
