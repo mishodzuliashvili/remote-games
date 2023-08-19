@@ -7,12 +7,15 @@ import { useCallback } from "react";
 import Particles from "react-particles";
 import { loadSlim } from "tsparticles-slim"; // if you are going to use `loadSlim`, install the "tsparticles-slim" package too.
 import type { Engine } from "tsparticles-engine";
+import useWindowSize from "react-use/lib/useWindowSize";
+import Confetti from "react-confetti";
 
 export default function Home() {
   const { player, game } = useMain();
   const particlesInit = useCallback(async (engine: Engine) => {
     await loadSlim(engine);
   }, []);
+  const { width, height } = useWindowSize();
   return (
     <main className="">
       <div className="fixed top-0 left-0 bg-gradient-to-tr w-full h-screen -z-10 from-purple-500 to-blue-500"></div>

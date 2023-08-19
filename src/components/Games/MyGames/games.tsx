@@ -1,3 +1,4 @@
+import RockPaperScissors from "./RockPaperScissors";
 import TicTacToe from "./TicTacToe";
 
 export const GAME_PROFILES: GameProfile[] = [
@@ -13,7 +14,7 @@ export const GAME_PROFILES: GameProfile[] = [
   {
     name: "Rock Paper Scissors",
     gameRoomName: "Rock Paper Scissors",
-    component: null,
+    component: <RockPaperScissors />,
     description:
       'Rock paper scissors is an intransitive hand game, usually played between two people, in which each player simultaneously forms one of three shapes with an outstretched hand. These shapes are "rock", "paper", and "scissors"',
     image:
